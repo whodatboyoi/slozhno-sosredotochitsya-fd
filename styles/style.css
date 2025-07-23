@@ -2,4 +2,359 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
 }
+
+.header {
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  position: relative;
+  min-height: 668px;
+  padding-block: 10px;
+  padding-inline: 10px;
+}
+
+.decorated__element {
+  position: absolute;
+  top: 10px;
+  right: 39px;
+  font-family: var(--font-family-main), monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--accent-color);
+}
+
+.decorated__element::after {
+  content: '';
+  display: block;
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 43px;
+  top: 8px;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--btn-color);
+  border-block-start: 1px solid var(--btn-color);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.decorated-zone::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var( --btn-color);
+  border-block-end: 1px solid var( --btn-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  color: var(--accent-color);
+  font-family: var(--font-family-main);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+  padding: 0px, 13px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.header__theme-title {
+  font-family: var(--font-family-main), monospace;
+  color: var(--theme-title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px 0px var(--accent-color);
+  padding-top: 15px;
+}
+
+.header__theme-subtitle {
+  justify-self: end;
+  width: 100%;
+  min-width: 355px;
+}
+
+.title__decorated {
+  font-family: var(--font-family-main), monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-inline: 10px;
+  margin-top: 40px;
+}
+
+.section {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.section__title {
+  font-family: var(--font-family-main), monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--accent-color);
+}
+
+.artilces-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article-block__text {
+  font-family: var(--font-family-main), monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--tx-color);
+}
+
+.article-block__subtitle {
+  font-family: var(--font-family-main), monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+}
+
+.article-block__text-link {
+  text-shadow: 2px 1px var(--accent-color);
+}
+
+.article-block__text-link:hover {
+  text-decoration: underline;
+}
+
+.article-block__text-link:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+
+.article-gallery {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.article-gallery__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.footer {
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr;
+  block-size: 100vh;
+  position: relative;
+  min-height: 668px;
+  padding-block: 10px;
+  padding-inline: 10px;
+  margin-top: 40px;
+  }
+
+.footer__theme-title {
+  font-family: var(--font-family-main), monospace;
+  color: var(--theme-title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  }
+
+/*Адаптив для планшетов*/
+
+@media (min-width: 768px) and (max-width:1023.99px) {
+  .header {
+    gap: 162px;
+    justify-content: normal;
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .title_description {
+    width: 100%;
+    max-width: 491px;
+  }
+
+  .header__theme-subtitle {
+    width: calc(50% - 20px);
+    justify-self: right;
+  }
+
+  .content {
+    margin-top: 60px;
+    gap: 80px;
+  }
+
+  .section_why {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'question_why answers_why';
+    gap: 20px;
+  }
+
+  .question_what {
+    width: 30%;
+  }
+
+  .section_how {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    'question_how answers_how';
+    gap: 20px;
+  }
+
+  .article-gallery {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .img-sunset {
+    grid-column: 1 / 3;
+  }
+
+  .img-ice-cream {
+    grid-column: 3 / 4;
+    grid-row:  1 / 3;
+  }
+
+  .img-tape {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  .img-books {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .img-street {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .footer{
+    justify-items: center;
+    margin-top: 60px;
+  }
+
+}
+
+
+
+/*Адаптив для десктоп*/
+
+@media (min-width: 1024px) {
+  .header {
+    gap: 162px;
+    justify-content: normal;
+    align-items: start
+  }
+  .header__theme-menu {
+    justify-self: center;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .title_description {
+    max-width: 50%;
+  }
+
+  .content {
+    margin-top: 60px;
+    gap: 80px;
+  }
+
+  .section_what {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "question_what ."
+      "answers_what answers_what";
+    gap: 10px;
+  }
+
+  .question_what {
+    display: block;
+    width: 100%;
+    grid-area: question_what;
+  }
+
+  .answers_what {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-area: answers_what;
+  }
+
+  .footer {
+    margin-top: 60px;
+  }
+}
+
+
+
