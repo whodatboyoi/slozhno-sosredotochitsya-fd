@@ -78,7 +78,7 @@
 .header__theme-menu-button {
   border: 1px solid transparent;
   color: var(--menu-tx-color);
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-main), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -86,10 +86,21 @@
   text-transform: lowercase;
   background-color: transparent;
   padding: 0px, 13px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  border: 1px solid var(--menu-tx-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--menu-tx-color);
+}
+
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
   border: 1px solid var(--menu-tx-color);
 }
 
