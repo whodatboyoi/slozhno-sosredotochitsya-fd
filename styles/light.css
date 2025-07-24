@@ -18,6 +18,7 @@
   --title-decor-color: #353430;
   --tx-color: #353430;
   --btn-color: #353430;
+  --decoration-gap: 10px;
 }
 
 .theme-light .page {
@@ -38,5 +39,6 @@
     --title-decor-color: #353430;
     --tx-color: #353430;
     --btn-color: #353430;
+    --decoration-gap: 10px;
   }
 }
