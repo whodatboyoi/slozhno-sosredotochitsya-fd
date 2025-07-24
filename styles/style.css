@@ -140,7 +140,7 @@
 .section {
   display: grid;
   grid-template-rows: 1fr;
-  gap: 20px;
+  gap: 10px;
 }
 
 .section__title {
@@ -230,18 +230,9 @@
 /*Адаптив для планшетов*/
 
 @media (min-width: 768px) and (max-width:1023.99px) {
-  .header {
-    gap: 162px;
-    justify-content: normal;
-  }
 
   .header__theme-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .title_description {
-    width: 100%;
-    max-width: 491px;
   }
 
   .header__theme-subtitle {
@@ -277,7 +268,7 @@
   .article-gallery {
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 20px;
   }
 
@@ -321,13 +312,10 @@
 /*Адаптив для десктоп*/
 
 @media (min-width: 1024px) {
-  .header {
-    gap: 162px;
-    justify-content: normal;
-    align-items: start
-  }
+
   .header__theme-menu {
     justify-self: center;
+    align-self: start;
   }
   .header__theme-menu-list {
     flex-direction: row;
