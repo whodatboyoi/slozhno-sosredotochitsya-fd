@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
+  background-attachment: fixed;
 }
 
 .header {
@@ -293,7 +294,7 @@
     grid-row: 3 / 4;
   }
 
-  .footer{
+  .footer {
     justify-items: center;
     margin-top: 60px;
   }
