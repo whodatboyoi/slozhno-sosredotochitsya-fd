@@ -194,6 +194,7 @@
 
 .article-block__text-link {
   text-shadow: 2px 1px var(--accent-color);
+  text-decoration: none;
 }
 
 .article-block__text-link:hover {
