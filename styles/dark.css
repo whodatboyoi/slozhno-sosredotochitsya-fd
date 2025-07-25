@@ -19,6 +19,7 @@
   --tx-color: #f1b2ce;
   --btn-color: #ff0070;
   --decoration-gap: 10px;
+  --border-color-opacity: rgba(255, 0, 112, 0.4);
 }
 
 .theme-dark .page {
@@ -34,5 +35,6 @@
   --tx-color: #f1b2ce;
   --btn-color: #ff0070;
   --decoration-gap: 10px;
+  --border-color-opacity: rgba(255, 0, 112, 0.4);
 }
 }

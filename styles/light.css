@@ -19,6 +19,7 @@
   --tx-color: #353430;
   --btn-color: #353430;
   --decoration-gap: 10px;
+  --border-color-opacity: rgba(50, 49, 45, 0.4);
 }
 
 .theme-light .page {
@@ -40,5 +41,6 @@
     --tx-color: #353430;
     --btn-color: #353430;
     --decoration-gap: 10px;
+    --border-color-opacity: rgba(50, 49, 45, 0.4);
   }
 }

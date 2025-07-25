@@ -4,6 +4,8 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-image);
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .header {
@@ -111,7 +113,7 @@
 }
 
 .header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
-  border: 1px solid var(--menu-tx-color);
+  border: 1px solid var(--border-color-opacity);
 }
 
 .header__theme-title {
@@ -195,11 +197,12 @@
 }
 
 .article-block__text-link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--tx-color);
+  cursor: pointer;
 }
 
 .article-block__text-link:focus {
-  outline: 1px solid #ffffff;
+  outline: 1px solid var(--tx-color);
   outline-offset: 1px;
 }
 
@@ -260,11 +263,9 @@
   }
 
   .section_why {
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     'question_why answers_why';
-    gap: 20px;
   }
 
   .question_what {
@@ -272,11 +273,9 @@
   }
 
   .section_how {
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     'question_how answers_how';
-    gap: 20px;
   }
 
   .article-gallery {
@@ -354,7 +353,6 @@
   }
 
   .section_what {
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas:
