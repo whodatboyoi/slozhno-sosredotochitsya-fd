@@ -24,9 +24,6 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-  .decorated__element {
-    display: none;
-  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -43,4 +40,12 @@
     --decoration-gap: 10px;
     --border-color-opacity: rgba(50, 49, 45, 0.4);
   }
+}
+
+.theme-light .decorated__element::before {
+  display: none;
+}
+
+.theme-light .decorated__element::after {
+  display: none;
 }
