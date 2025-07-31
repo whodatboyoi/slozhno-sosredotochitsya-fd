@@ -38,3 +38,11 @@
   --border-color-opacity: rgba(255, 0, 112, 0.4);
 }
 }
+
+.theme-dark .decorated__element::before {
+  display: inline-block;
+}
+
+.theme-dark .decorated__element::after {
+  display: inline-block;
+}
