@@ -156,6 +156,10 @@
   gap: 20px;
 }
 
+.gallery-section {
+  gap: 10px;
+}
+
 .section__title {
   font-family: var(--font-family-main), monospace;
   font-weight: 700;
@@ -282,6 +286,10 @@
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     'question_how answers_how';
+  }
+
+  .gallery-section {
+    gap: 20px;
   }
 
   .article-gallery {
