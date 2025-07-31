@@ -40,6 +40,15 @@
     --decoration-gap: 10px;
     --border-color-opacity: rgba(50, 49, 45, 0.4);
   }
+
+  .decorated__element::before {
+    display: none;
+  }
+
+  .decorated__element::after {
+    display: none;
+  }
+    
 }
 
 .theme-light .decorated__element::before {

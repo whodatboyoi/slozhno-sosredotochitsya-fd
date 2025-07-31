@@ -37,6 +37,14 @@
   --decoration-gap: 10px;
   --border-color-opacity: rgba(255, 0, 112, 0.4);
 }
+
+  .decorated__element::before {
+  display: inline-block;
+  }
+
+  .decorated__element::after {
+  display: inline-block;
+  }
 }
 
 .theme-dark .decorated__element::before {
