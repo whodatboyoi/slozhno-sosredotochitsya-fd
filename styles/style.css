@@ -374,6 +374,7 @@
     display: block;
     width: 100%;
     grid-area: question_what;
+    margin-bottom: 10px;
   }
 
   .answers_what {
