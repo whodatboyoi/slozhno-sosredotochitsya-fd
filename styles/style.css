@@ -287,7 +287,6 @@
   .article-gallery {
     grid-template-rows: auto;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 10px;
     gap: 20px;
   }
 
